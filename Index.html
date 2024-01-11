@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/static/css/style.css">
-  <title>Responsive Navigation</title>
+  <title>Fua chap chap</title>
 </head>
 <body>
 
@@ -24,7 +24,100 @@
 </div>
 
 <!-- Your page content goes here -->
+<!-- Background container for the image -->
+    <div class="background-container">
+        <div class="background-text">
+            <p>Experience sparkling clean clothes <br>At Fua chap chap
+                Quality services.
+            </p>
+        </div>
+    </div>
+<!--popular services-->
+<main>
+    <section class="popular-services">
+      <h2>Popular Services</h2>
+      <a href="#" class="view-all">View All ></a>
+      <div class="services">
+        <div class="service">
+          <img src="static/img/laundry1.jpg" alt="Laundry Service">
+          <h3>Laundry Service</h3>
+          <p>Starting from $5</p>
+        </div>
+        <div class="service">
+          <img src="static/img/wash.jpeg" alt="Personal Washer">
+          <h3>Personal Washer</h3>
+          <p>Starting from $10</p>
+        </div>
+        <div class="service">
+          <img src="static/img/laundry2.jpeg" alt="Express Delivery">
+          <h3>Express Delivery</h3>
+          <p>Starting from $15</p>
+        </div>
+      </div>
+    </section>
 
+    <section class="customer-reviews">
+      <h2>Customer Reviews</h2>
+      <p>See what our customers have to say</p>
+      <div class="review">
+        <img src="profile1.jpg" alt="John">
+        <p>Great service! My laundry was perfectly done.</p>
+        <span>- John</span>
+      </div>
+      <div class="review">
+        <img src="profile2.jpg" alt="Emily">
+        <p>Amazing experience with a friendly and efficient laundry chap chap.</p>
+        <span>- Emily</span>
+      </div>
+    </section>
+  </main>
+
+ <!-- Bottom Container -->
+    <h2>Fua Chap Chap</h2>
+    <div class="bottom-container">
+
+        <!-- Columns for bottom container -->
+
+        <div class="column">
+            <h3>Fua Chap Chap</h3>
+            <p>Follow us on all social media platforms to be well informed of our new offers and exciting deals.</p>
+            <div class="social-container">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook" style="color: #3b5998;"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram" style="color: #e4405f;"></i></a>
+                <a href="https://www.twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter" style="color: #1da1f2;"></i></a>
+                <a href="https://www.tiktok.com" target="_blank" class="social-icon"><i class="fab fa-tiktok" style="color: #d34f4f;"></i></a>
+
+            </div>
+        </div>
+        <div class="column">
+            <h3>Contact Info</h3>
+            <p>+123-456-7890</p>
+            <p>+111-222-3333</p>
+            <p>fuachapchap@gmail.com</p>
+        </div>
+        <div class="column">
+            <h3>Quick Links</h3>
+            <p>→ Home</p>
+            <p>→ About</p>
+            <p>→ FAQ</p>
+            <p>→ Services</p>
+            <p>→ contacts</p>
+            <p>→ Logout</p>
+        </div>
+        <div class="column">
+            <h3>Newsletter</h3>
+            <p>Subscribe For the Latest Updates</p>
+            <form action="{{ url_for('subscribe') }}" method="post">
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+                <button type="submit" class="subscribe-button">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripting for the icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

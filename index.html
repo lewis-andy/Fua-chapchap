@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="static/css/style.css">
   <title>Fua chap chap</title>
 </head>
 <body>
@@ -24,14 +24,14 @@
 </div>
 
 <!-- Your page content goes here -->
-<!-- Background container for the image -->
-    <div class="background-container">
+<!-- Background container for the image
+    <div class="background-container" style="background-image: url('static/img/topcontainer.jpeg')">
         <div class="background-text">
             <p>Experience sparkling clean clothes <br>At Fua chap chap
                 Quality services.
             </p>
         </div>
-    </div>
+    </div> -->
 <!--popular services-->
 <main>
     <section class="popular-services">
@@ -60,10 +60,16 @@
       <h2>Customer Reviews</h2>
       <p>See what our customers have to say</p>
       <div class="review">
-        <img src="profile1.jpg" alt="John">
+           <div class="review-container">
+        <img class="profile-image" src="default-profile-image.jpg" alt="Profile Image" id="profileImage">
+        <div class="edit-icon" onclick="openFileInput()">
+
         <p>Great service! My laundry was perfectly done.</p>
         <span>- John</span>
-      </div>
+        </div>
+           </div>
+           </div>
+
       <div class="review">
         <img src="profile2.jpg" alt="Emily">
         <p>Amazing experience with a friendly and efficient laundry chap chap.</p>
@@ -118,6 +124,6 @@
     <!-- Scripting for the icon -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="script.js"></script>
+<script src="static/js/script.js"></script>
 </body>
 </html>

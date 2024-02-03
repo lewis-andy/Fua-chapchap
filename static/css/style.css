@@ -7,7 +7,9 @@ body {
 .navbar {
   background-color: royalblue;
   padding: 15px;
+  height: 80px;
   display: flex;
+  position:relative;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid rgb(40, 39, 39);
@@ -67,7 +69,200 @@ body {
     display: flex; /* Show the links when the class 'show' is added */
   }
 }
-/* popular services*/
+/* after navigation bar*/
+
+
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+.proposal {
+  color:steelblue;
+}
+
+/* Slider section styles */
+.slider_section {
+  position: relative;
+  overflow: hidden;
+  background-color: darkslategray; /* Set your background color */
+  background-image:url("static/img/img_1.png") ;
+}
+
+.slider_bg_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-item {
+  display: none; /* Hide all items by default */
+  text-align: center;
+  color: whitesmoke; /* Set your text color */
+}
+
+.carousel-item.active {
+  display: block; /* Show only the active item */
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+.detail-box {
+  text-align: left;
+  padding: 50px;
+}
+
+.detail-box h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.detail-box p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.btn-box {
+  display: flex;
+}
+
+.btn1,
+.btn2 {
+  display: inline-block;
+  padding: 15px 30px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
+  background-color:steelblue ; /* Set your button background color */
+  font-size: 1.2em;
+}
+
+/* Animation styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .detail-box {
+    padding: 30px;
+  }
+
+  .detail-box h1 {
+    font-size: 2.5em;
+  }
+
+  .detail-box p {
+    font-size: 1.2em;
+  }
+
+  .btn-box {
+    flex-direction: column;
+  }
+
+  .btn1, .btn2 {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .detail-box {
+    padding: 20px;
+  }
+
+  .detail-box h1 {
+    font-size: 2em;
+  }
+
+  .detail-box p {
+    font-size: 1em;
+  }
+
+  .btn1, .btn2 {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+
+/*End of after nav bar*/
+
+/* Testimonial */
+/*** Testimonial ***/
+.testimonial-carousel .owl-item .testimonial-item img {
+    width: 60px;
+    height: 60px;
+}
+
+.testimonial-carousel .owl-item .testimonial-item,
+.testimonial-carousel .owl-item .testimonial-item * {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item {
+    background: var(--primary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item * {
+    color: #FFFFFF !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item i {
+    color: var(--secondary) !important;
+}
+
+.testimonial-carousel .owl-nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    margin: 0 12px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark);
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    font-size: 18px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    color: #FFFFFF;
+    background: var(--primary);
+}
 /* Popular services section */
 .services {
   display: flex;
@@ -142,129 +337,129 @@ body {
     font-weight: 1000;
     z-index: 100;
   }
-/* Bottom most container*/
-.background-container {
-  background-image: url('/static/img/backg.jpg'); /* Replace 'your-image.jpg' with the path to your image */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 100vh; /* Adjust the height as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
+/* Bottom most container */
 
 .bottom-container {
-    background-color: #060606;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    height: 300px;
+  display: flex;
+  justify-content: space-around;
+  background-color:darkslategray;
+  padding: 20px;
+}
+
+/* Style for each Column */
+.column {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.column h3 {
+  color: steelblue;
+}
+
+.column p {
+  color: antiquewhite;
+  margin-bottom: 10px;
+}
+
+/* Social Icons */
+.social-icon {
+  margin: 0 5px;
+}
+
+/* Newsletter Form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.subscribe-button {
+  padding: 8px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .bottom-container {
+    flex-direction: column;
   }
 
   .column {
-    width: 20%;
+    margin-bottom: 20px;
   }
+}
+.bg-black {
+    background-color: black;
+}
+/* card section service start*/
+/* Style for Service Section */
+.services-mf {
+  background-color: #f8f9fa; /* Set background color for the service section */
+  padding: 60px 0; /* Adjust the top and bottom padding */
+}
 
-  .column h3 {
-    color: rgb(109, 212, 231); /* Gold color for heading */
+/* Style for Service Cards */
+.service-box {
+  background-color: #fff; /* Set background color for the service cards */
+  border-radius: 15px; /* Add rounded corners */
+  overflow: hidden; /* Hide any content that might overflow */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  transition: transform 0.3s ease; /* Add a smooth transition on hover */
+}
+
+.service-box:hover {
+  transform: scale(1.05); /* Increase the size slightly on hover */
+}
+
+.service-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background-color: #343a40; /* Set background color for the icon circle */
+  color: #fff; /* Set icon color */
+  border-radius: 50%; /* Make the icon circle */
+  font-size: 36px; /* Adjust the icon size */
+}
+
+.service-content {
+  padding: 20px; /* Adjust the padding inside the service content */
+}
+
+.s-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #343a40; /* Set title color */
+}
+
+.s-description {
+  font-size: 16px;
+  color: #666; /* Set description color */
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .service-box {
+    margin-bottom: 20px; /* Add some spacing between service cards on smaller screens */
   }
-
-  /* Style the input and button as needed */
-  input {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-
-  .subscribe-button {
-    /* Your styles for the button */
-    background-color: #4CAF50; /* Green background color */
-    color: white; /* White text color */
-    padding: 10px 15px; /* Padding around the text */
-    font-size: 16px; /* Font size of the text */
-    border: none; /* Remove default button border */
-    border-radius: 5px; /* Add some border radius for rounded corners */
-    cursor: pointer; /* Change cursor on hover */
-  }
-
-  .subscribe-button:hover {
-    background-color: #45a049; /* Darker green color on hover */
-  }
-  .review-container {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin: 10px;
-            position: relative;
-        }
-
-        .profile-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .edit-icon {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            background-color: #fff;
-            border: 2px solid #000;
-            border-radius: 50%;
-            padding: 4px;
-            cursor: pointer;
-        }
-
-        /* Hide the file input */
-        input[type="file"] {
-            display: none;
-        }
-main{
-    margin: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-}
-.product {
-    text-align: center;
-    margin: 20px;
-    background-color: #f6f9f7;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    max-width: 300px;
 }
 
-.product:hover {
-    transform: translateY(-5px);
-}
+/*card section service end*/
 
-.product img {
-    max-width: 100%;
-    border: 2px solid #00fc11;
-    border-radius: 10px;
-    transition: transform 0.2s;
-}
-
-.product img:hover {
-    transform: scale(1.05);
-}
-
-.product h2 {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.product p {
-    font-size: 16px;
-    margin: 10px 0;
-}
 
